@@ -3,21 +3,18 @@ const store = require('./../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
   $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
-  $('#message').removeClass('success')
-  $('#message').addClass('failure')
   $('form').trigger('reset')
 }
 
 const onSignUpSuccess = responseData => {
   successMessage('Signed up successfully!')
   $('#message').css('color', 'green')
+  $('#sign-up').addClass('hide')
 }
 
 const onSignUpFailure = () => {
@@ -29,6 +26,8 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   successMessage('Signed in successfully')
   $('#message').css('color', 'green')
+  $('#sign-up').addClass('hide')
+  $('#sign-in').addClass('hide')
 }
 
 const onSignInFailure = function () {
@@ -39,6 +38,7 @@ const onSignInFailure = function () {
 const onChangePasswordSuccess = function () {
   successMessage('Changed password successfully!')
   $('#message').css('color', 'green')
+  $('#message').addClass('hide')
 }
 
 const onChangePasswordFailure = function () {
@@ -46,9 +46,11 @@ const onChangePasswordFailure = function () {
   $('#message').css('color', 'red')
 }
 
-const onSignOutSuccess = function () {
+const onSignOutSuccess = responseData => {
   successMessage('Signed out successfully!')
   $('#message').css('color', 'green')
+  $('#sign-up').addClass('hide')
+  $('#sign-in').addClass('hide')
 }
 
 const onSignOutFailure = function () {

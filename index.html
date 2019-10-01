@@ -13,13 +13,32 @@
     </head>
     <body>
       <h1>TIC TAC TOE</h1>
-<br>
-<br>
-<br>
-<br>
+<section class="board-game">
+    <div class="container">
+      <div class="row">
+        <div id="0" class="box"></div>
+        <div id="1" class="box" ></div>
+        <div id="2" class="box"></div>
+      </div>
+      <div class="row">
+        <div id="3" class="box"></div>
+        <div id="4" class="box"></div>
+        <div id="5" class="box"></div>
+      </div>
+      <div class="row">
+        <div id="6" class="box"></div>
+        <div id="7" class="box"></div>
+        <div id="8" class="box"></div>
+      </div>
+    </div>
+  </section>
+  <button id="start-game"class="restart">Start Game</button>
+  <br>
+  <button id="get">Total Games</button>
+
+
 <h4 id="message"></h4>
 <br>
-<h3>Sign Up</h3>
 <form id="sign-up">
     <input type="email" name="credentials[email]" placeholder="Enter Email" required>
     <input type="password" name="credentials[password]" placeholder="Enter Password" required >
@@ -27,44 +46,21 @@
     <button>Sign Up</button>
 </form>
 <br>
-<h3>Sign In</h3>
 <form id="sign-in">
     <input type="email" name="credentials[email]" placeholder="Enter Email" required>
     <input type="password" name="credentials[password]" placeholder="Enter Password" required >
     <button>Sign In</button>
 </form>
 <br>
-<h3>Change Password</h3>
-<form id="change-password">
+<form id="change-password" >
     <input type="password" name="passwords[old]" placeholder="Enter old password">
     <input type="password" name="passwords[new]" placeholder="Enter new Password" >
     <button>Change Password</button>
 </form>
 <br>
-      <h2>Sign Out</h2>
-      <form id="sign-out">
+      <form id="sign-out" >
         <button>Sign Out</button>
       </form>
-<br>
-      <section class="board-game">
-          <div class="container">
-            <div class="row">
-              <div id="1" class="box"></div>
-              <div id="2" class="box"></div>
-              <div id="3" class="box"></div>
-            </div>
-            <div class="row">
-              <div id="4" class="box"></div>
-              <div id="5" class="box"></div>
-              <div id="6" class="box"></div>
-            </div>
-            <div class="row">
-              <div id="7" class="box"></div>
-              <div id="8" class="box"></div>
-              <div id="9" class="box"></div>
-            </div>
-          </div>
-        </section>
 
 
     </body>
