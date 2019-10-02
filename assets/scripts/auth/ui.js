@@ -24,6 +24,10 @@ const onSignUpFailure = () => {
 
 const onSignInSuccess = function (response) {
   store.user = response.user
+  $('#start-game').show()
+  $('.box').show()
+  $('#get').show()
+
   successMessage('Signed in successfully')
   $('#message').css('color', 'green')
   $('#sign-up').addClass('hide')
