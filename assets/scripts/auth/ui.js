@@ -27,6 +27,8 @@ const onSignInSuccess = function (response) {
   $('#start-game').show()
   $('.box').show()
   $('#get').show()
+  $('#change-password').show()
+  $('#sign-out').show()
 
   successMessage('Signed in successfully')
   $('#message').css('color', 'green')
@@ -42,7 +44,6 @@ const onSignInFailure = function () {
 const onChangePasswordSuccess = function () {
   successMessage('Changed password successfully!')
   $('#message').css('color', 'green')
-  $('#message').addClass('hide')
 }
 
 const onChangePasswordFailure = function () {
@@ -53,8 +54,11 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = responseData => {
   successMessage('Signed out successfully!')
   $('#message').css('color', 'green')
-  $('#sign-up').addClass('hide')
-  $('#sign-in').addClass('hide')
+  $('#start-game').hide()
+  $('.box').hide()
+  $('#get').hide()
+  $('#change-password').hide()
+  $('#sign-out').hide()
 }
 
 const onSignOutFailure = function () {
