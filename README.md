@@ -9,10 +9,7 @@
 -JQuery
 
 ## Planning
-## The plan for this project was to keep the application as simple as possible. While using the techniques and methods my classmates and I learned in the first unit of the program.
-
-## Development Process
-## I focused on building the form authentications, then after the API aspect I moved onto the game logic. I wanted to implement a nice styling with the css as well.
+## The plan for this project was to keep the application as simple as possible. While using the techniques and methods my classmates and I learned in the first unit of the program. I focused on building the form authentications, then after the API aspect I moved onto the game logic. I wanted to implement a nice styling with the css as well.
 
 ## Problem-Solving Strategy
 

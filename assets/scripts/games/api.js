@@ -12,7 +12,7 @@ const newGame = function () {
   })
 }
 
-const getGame = function () {
+const getGame = function (event) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
@@ -22,7 +22,7 @@ const getGame = function () {
   })
 }
 
-const updateGame = function (currentPlayer, index) {
+const updateGame = function (currentPlayer, index, gameOver) {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
@@ -36,7 +36,7 @@ const updateGame = function (currentPlayer, index) {
             'index': index,
             'value': currentPlayer
           },
-          'over': false
+          'over': gameOver
         }
       }
   })
