@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>TIC TAC TOE</h1>
+<section id="board-game">
+  <p id='game-notification'></p>
+    <div class="container">
+      <div class="row">
+        <div id="0" class="box"></div>
+        <div id="1" class="box" ></div>
+        <div id="2" class="box"></div>
+      </div>
+      <div class="row">
+        <div id="3" class="box"></div>
+        <div id="4" class="box"></div>
+        <div id="5" class="box"></div>
+      </div>
+      <div class="row">
+        <div id="6" class="box"></div>
+        <div id="7" class="box"></div>
+        <div id="8" class="box"></div>
+      </div>
+    </div>
+    <button id="start-game"class="restart">Start Game</button>
+    <form id="get">
+    <button type="submit">Total Games</button>
+    <div class="game-total"></div>
+  </form>
+  </section>
+
+<h4 id="message"></h4>
+<br>
+<form id="sign-up">
+    <input type="email" name="credentials[email]" placeholder="Enter Email" required>
+    <input type="password" name="credentials[password]" placeholder="Enter Password" required >
+    <input type="password" name="credentials[password_confirmation]" placeholder="Enter password again" required >
+    <button>Sign Up</button>
+</form>
+<br>
+<form id="sign-in">
+    <input type="email" name="credentials[email]" placeholder="Enter Email" required>
+    <input type="password" name="credentials[password]" placeholder="Enter Password" required >
+    <button>Sign In</button>
+</form>
+<br>
+<form id="change-password" >
+    <input type="password" name="passwords[old]" placeholder="Enter old password">
+    <input type="password" name="passwords[new]" placeholder="Enter new Password" >
+    <button>Change Password</button>
+</form>
+<br>
+      <form id="sign-out" >
+        <button>Sign Out</button>
+      </form>
+
+
+    </body>
+</html>
