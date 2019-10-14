@@ -19,7 +19,7 @@ const onUpdateGameFailure = function (data) {
   $('#message').html('Something went Wrong, please try again')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
-  // store.game = data.game
+  store.game = data.game
 }
 
 const onGameRecordSuccess = function (data) {

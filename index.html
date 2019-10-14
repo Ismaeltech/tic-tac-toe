@@ -13,7 +13,8 @@
     </head>
     <body>
       <h1>TIC TAC TOE</h1>
-<section class="board-game">
+<section id="board-game">
+  <p id='game-notification'></p>
     <div class="container">
       <div class="row">
         <div id="0" class="box"></div>
@@ -31,14 +32,12 @@
         <div id="8" class="box"></div>
       </div>
     </div>
+    <button id="start-game"class="restart">Start Game</button>
+    <form id="get">
+    <button type="submit">Total Games</button>
+    <div class="game-total"></div>
+  </form>
   </section>
-  <button id="start-game"class="restart">Start Game</button>
-  <br>
-  <form id="get">
-  <button type="submit">Total Games</button>
-  <div class="game-total"></div>
-</form>
-<p id='game-notification'></p>
 
 <h4 id="message"></h4>
 <br>

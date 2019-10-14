@@ -1,6 +1,7 @@
 'use strict'
 
 const store = {
+
 }
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 

@@ -3,12 +3,16 @@ const store = require('./../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
+  $('#message').removeClass('failure')
+  $('#message').addClass('success')
   $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
   $('form').trigger('reset')
+  $('#message').addClass('failure')
+  $('#message').removeClass('success')
 }
 
 const onSignUpSuccess = responseData => {
@@ -23,17 +27,13 @@ const onSignUpFailure = () => {
 }
 
 const onSignInSuccess = function (response) {
+  successMessage('Signed in successfully')
   store.user = response.user
-  $('#start-game').show()
-  $('.box').show()
-  $('#get').show()
+  $('#message').css('color', 'green')
+  $('#sign-up, #sign-in').hide()
+  $('#board-game').show()
   $('#change-password').show()
   $('#sign-out').show()
-
-  successMessage('Signed in successfully')
-  $('#message').css('color', 'green')
-  $('#sign-up').addClass('hide')
-  $('#sign-in').addClass('hide')
 }
 
 const onSignInFailure = function () {
@@ -53,10 +53,9 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = responseData => {
   successMessage('Signed out successfully!')
-  $('#message').css('color', 'green')
-  $('#start-game').hide()
-  $('.box').hide()
-  $('#get').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
+  $('#board-game').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
 }

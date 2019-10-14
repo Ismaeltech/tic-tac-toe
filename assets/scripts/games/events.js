@@ -21,7 +21,6 @@ const boardClick = function (event) {
   if ($(event.target).text() === '' && store.winner === false) {
     $(event.target).text(store.currentPlayer)
 
-    // first update API with the currentplayer and the spot they chose
     api.updateGame(store.currentPlayer, event.target.id, gameOver)
       // if updating game is successful
       .then((response) => {
